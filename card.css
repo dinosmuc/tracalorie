@@ -1,0 +1,52 @@
+/* Styles for the card */
+.card {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* set width to 80% of the parent element */
+    min-height: 200px; /* set minimum height */
+    padding: 20px; /* add padding */
+    box-sizing: border-box; /* include padding and border in width */
+  }
+  
+  .meal-calories label {
+    margin-top: 2%;
+    margin-left: 4%;
+    width: 44%;
+    display: inline-block; /* add display property */
+  }
+  
+  .meal-calories input {
+    border: none; /* remove the border */
+    border-bottom: 2px solid darkgray; /* add a bottom border */
+    width: 44%;
+    margin-left: 4%;
+    background-color: transparent; /* make the background transparent */
+    padding: 0; /* remove the padding */
+    margin-top: 1%;
+    display: inline-block; /* add display property */
+  }
+  
+  .meal-calories input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .add-meal{
+    margin-top: 3%;
+    margin-left: 4%;
+  }
+  
+  #calories{
+    margin-left: 4%;
+  }
+  
+  #meal{
+    margin-left: 4%;
+  }
+  
+  .button-meal{
+    margin-top: 10%;
+    margin-left: 12.5%;
+    border-radius: 0 !important;
+  }

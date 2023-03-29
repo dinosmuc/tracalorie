@@ -1,0 +1,25 @@
+/* Styles for the navbar */
+.custom-navbar {
+    display: flex;
+    justify-content: center; /* center the navbar horizontally */
+    background-color: #66b3ff; /* set background color */
+    color: white; /* set text color */
+    position: relative; /* required for centering the navbar brand */
+  }
+  
+  .custom-navbar .navbar-brand {
+    position: absolute; /* center the navbar brand */
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8em;
+  }
+  
+/* Styles for primary buttons */
+.btn-clear-all:not(.navbar-brand) {
+    background-color: lightblue; /* set background color */
+    margin-right: 10%; /* set right margin */
+    margin-left: auto; /* align button to the right */
+    border-radius: 0;
+  }
+  
