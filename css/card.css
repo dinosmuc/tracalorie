@@ -3,6 +3,7 @@
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 0% !important;
     width: 80%; /* set width to 80% of the parent element */
     min-height: 200px; /* set minimum height */
     padding: 20px; /* add padding */
@@ -33,7 +34,7 @@
   }
   
   .add-meal{
-    margin-top: 3%;
+    margin-top: 1%;
     margin-left: 4%;
   }
   

@@ -1,4 +1,4 @@
-const InputColorChanger = (() => {
+const InputChanger = (() => {
     
     
     // Function to replace the calories input with a number input if it's not a number input already
@@ -62,11 +62,17 @@ const InputColorChanger = (() => {
         });
     };
 
+    const clearInputs = ()=>{
+        document.getElementById("meal-input").value = "";
+        document.getElementById("calories-input").value = "";
+    }
+
   
     // Public API
     return {
       changeInputsColor,
+      clearInputs,
     };
   })();
   
-  export default InputColorChanger;
+  export default InputChanger;
