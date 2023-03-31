@@ -67,11 +67,24 @@ const InputChanger = (() => {
         document.getElementById("calories-input").value = "";
     }
 
+    const prepereInputs = ()=>{
+        let textData = event.target.parentElement.querySelector("div").textContent;
+        let textDataFilter = textData.replace("Calories","");
+  
+        let mealData = textDataFilter.split(":");
+  
+        mealData = mealData.map(textDataFilter => textDataFilter.trim());
+        
+        document.getElementById("meal-input").value = mealData[0];
+        document.getElementById("calories-input").value = mealData[1];
+  }
+
   
     // Public API
     return {
       changeInputsColor,
       clearInputs,
+      prepereInputs,
     };
   })();
   

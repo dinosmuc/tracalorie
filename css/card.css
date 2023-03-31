@@ -51,3 +51,19 @@
     margin-left: 12.5%;
     border-radius: 0 !important;
   }
+  .new-btn {
+    margin-top: 5%;
+    border-radius: 0 !important;
+    font-size: 0.8rem !important;
+}
+.update-meal-btn {
+    margin-left: 12.5%;
+    width: 90%;
+}
+.delete-meal-btn {
+    width: 90%;
+}
+.back-btn{
+  width: 30%;
+  margin-right: 11%;
+}
