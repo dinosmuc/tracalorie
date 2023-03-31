@@ -1,5 +1,5 @@
 
-import { CardState, EditState, StepBackState, DefaultState } from './cardStateModule.js';
+import { CardState, DefaultState } from './stateModules/defaultState.js';
 
 const cardState = new CardState();
 

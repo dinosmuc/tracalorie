@@ -1,5 +1,5 @@
-  import { MealModule } from './mealModule.js';
-  import InputChanger from './inputModule.js';
+  import { MealModule } from '../componentModules/mealModule.js';
+  import InputChanger from '../componentModules/inputModule.js';
 
 
   class CardState {
@@ -15,6 +15,9 @@
       this.state.updateCard();
     }
   }
+
+
+
   class DefaultState {
     constructor() {
       this.total = 0;
@@ -94,52 +97,8 @@
   }
 
 
-  class StepBackState {
-    updateCard() {
-      const rowElement = document.querySelector(".row");
 
-      rowElement.innerHTML = ``;
-
-      const colElement = createElement("div", { class: "col-4" });
-
-      rowElement.appendChild(colElement);
-
-      const buttonMeal = createElement("button", { class: "btn btn-primary button-meal" });
-      buttonMeal.innerHTML = `+ ADD MEAL`;
-
-      colElement.appendChild(buttonMeal);
-    }
-  }
-
-  class EditState {
-
-    updateCard() {
-      const rowElement = document.querySelector(".row");
-
-      const colElement = document.querySelector(".col-4");
-
-      const buttonMeal = document.querySelector(".button-meal");
-
-      buttonMeal.remove();
-      colElement.remove();
-
-      rowElement.innerHTML = `
-      <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <button class="btn btn-warning new-btn update-meal-btn">UPDATE MEAL</button>
-            </div>
-            <div class="col-4">
-                <button class="btn btn-danger new-btn delete-meal-btn">DELETE MEAL</button>
-            </div>
-            <div class="col-4 text-end">
-                <button class="btn btn-secondary new-btn back-btn">BACK</button>
-            </div>
-        </div>
-      </div>
-      `
-     }
-  }
+ 
 
 function createElement(tag, attributes) {
   const element = document.createElement(tag);
@@ -151,4 +110,4 @@ function createElement(tag, attributes) {
   return element;
 }
 
-export { CardState,DefaultState,StepBackState,EditState };
+export { CardState,DefaultState };

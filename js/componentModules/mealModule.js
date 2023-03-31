@@ -36,21 +36,7 @@ function createMeal(name, calories) {
   return new Meal(name, parseInt(calories));
 }
 
-function clearMeals(){
-  while (document.querySelector(".list-group").firstChild) {
-    document.querySelector(".list-group").removeChild(document.querySelector(".list-group").firstChild);
-  }
-}
-
-function updateTotal(total){
-  const totalCalories = document.querySelector(".total");
-  totalCalories.innerHTML = `<h1>Total calories: ${total}</h1>`
-}
-
-
 
 export const MealModule = {
   createMeal,
-  clearMeals,
-  updateTotal,
 };
