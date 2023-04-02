@@ -1,68 +1,27 @@
-  import { MealModule } from '../componentModules/mealModule.js';
-  import InputChanger from '../componentModules/inputModule.js';
+import InputChanger from '../componentModules/inputModule.js';
+  
 
-
-  class CardState {
-    constructor() {
-      this.state = new DefaultState();
-    }
-
-    changeState(state) {
-      this.state = state;
-    }
-
-    updateCard() {
-      this.state.updateCard();
-    }
+class CardState {
+  constructor() {
+    this.state = new DefaultState();
   }
 
+  changeState(state) {
+    this.state = state;
+  }
+
+  updateCard() {
+    this.state.updateCard();
+  }
+}
 
 
-  class DefaultState {
-    constructor() {
-      this.total = 0;
-    }
 
-    addEventListeners() {
-      const addMealButton = document.querySelector(".button-meal");
-      addMealButton.addEventListener("click", ()=>{
-
-        console.log(document.getElementById("meal-input").value);
-        
-        
-        let tempMealVar = document.getElementById("meal-input");
-        let tempCaloriesVar = document.getElementById("calories-input");
-
-        if(tempCaloriesVar.value === "" || tempMealVar.value === ""){
-          alert("Please fill both inputs!");
-        }else{
-          const meal = MealModule.createMeal(tempMealVar.value, tempCaloriesVar.value);
-          meal.addMealToList();
-          this.total += parseInt(tempCaloriesVar.value);
-          MealModule.updateTotal(this.total);
-          InputChanger.clearInputs();
-        }
-        
-      });
-
-      const clearAll = document.querySelector(".btn-clear-all")
-      clearAll.addEventListener("click",()=>{
-        this.resetAndClearAll();
-      })
-
-
-    }
-
-    resetAndClearAll() {
-      this.total = 0;
-      this.updateCard();
-      console.log(document.getElementById("meal-input").value);
-      
-    }
-
-    updateCard() {
-      const body = document.querySelector("body");
-      body.innerHTML = `<nav class="navbar navbar-blue custom-navbar d-flex justify-content-center">
+class DefaultState {
+    
+  updateCard() {
+    const body = document.querySelector("body");
+    body.innerHTML = `<nav class="navbar navbar-blue custom-navbar d-flex justify-content-center">
                           <span class="navbar-brand mx-auto h1 text-center">Tracalorie</span>
                           <button class="btn btn-primary btn-clear-all">CLEAR ALL</button>
                           </nav>
@@ -91,23 +50,12 @@
                               </ul>
                           </div>
                         `
-        this.addEventListeners();
-        InputChanger.changeInputsColor();
+      InputChanger.changeInputsColor();
     }
   }
 
+  
 
 
- 
-
-function createElement(tag, attributes) {
-  const element = document.createElement(tag);
-
-  for (const key in attributes) {
-    element.setAttribute(key, attributes[key]);
-  }
-
-  return element;
-}
-
-export { CardState,DefaultState };
+export { CardState,
+         DefaultState, };

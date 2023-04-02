@@ -35,8 +35,14 @@ class Meal {
 function createMeal(name, calories) {
   return new Meal(name, parseInt(calories));
 }
+function updateTotal(total){
+  const totalCalories = document.querySelector(".total");
+  totalCalories.innerHTML = `<h1>Total calories: ${total}</h1>`
+}
+
 
 
 export const MealModule = {
   createMeal,
+  updateTotal,
 };

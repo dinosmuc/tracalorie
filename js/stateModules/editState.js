@@ -1,13 +1,16 @@
 class EditState {
     updateCard() {
-      const rowElement = document.querySelector(".row");
+        const rowElement = document.querySelector(".row");
 
-      const colElement = document.querySelector(".col-4");
-
-      const buttonMeal = document.querySelector(".button-meal");
-
-      buttonMeal.remove();
-      colElement.remove();
+        const buttonMeal = document.querySelector(".button-meal");
+        if (buttonMeal) {
+          buttonMeal.remove();
+        }
+    
+        const colElement = document.querySelector(".col-4");
+        if (colElement) {
+          colElement.remove();
+        }
 
       rowElement.innerHTML = `
       <div class="container">
@@ -23,6 +26,8 @@ class EditState {
             </div>
         </div>
       </div>
-      `
+      `  
      }
   }
+
+  export {EditState};
